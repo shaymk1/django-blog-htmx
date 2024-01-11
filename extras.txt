@@ -1,0 +1,1 @@
+OLD SECRET_KEY = 'django-insecure-*13$unr_ysd**$51#(d0eb+0#@xd#*=pkwo)2n%1(bysp#wxym'
