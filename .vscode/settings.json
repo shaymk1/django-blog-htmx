@@ -1,6 +1,7 @@
 {
   "editor.formatOnSave": true,
   "python.formating.provider": "black",
+<<<<<<< HEAD
   "python.formatting.blackArgs": ["--line-length", "90"],
 
   // "python.linting.enabled": true,
@@ -10,6 +11,14 @@
   //     "--max-line-length",
   //     "88",
   // ],
+=======
+  "python.formatting.blackArgs": ["--line-length", "88"],
+
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length", "88"],
+>>>>>>> dev-v1.0.1
 
   "[python]": {
     "editor.codeActionsOnSave": {
