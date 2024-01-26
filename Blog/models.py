@@ -17,7 +17,7 @@ class Post(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
-    feature_image = models.ImageField(upload_to="images/")
+    # feature_image = models.ImageField(upload_to="images/")
     status = models.CharField(max_length=10, choices=options, default="draft")
 
     class Meta:
