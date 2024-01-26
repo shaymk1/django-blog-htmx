@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Post(models.Model):
+    options = (
+        ("draft", "Draft"),
+        ("published", "Published"),
+    )
     title = models.CharField(max_lenght=250)
     subtitle = models.CharField(max_lenght=250)
     slug = models.SlugField(max_lenght=250, unique=True)
@@ -14,3 +18,10 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
     feature_image = models.ImageField(upload_to="images/")
+    status = models.CharField(max_length=10, choices=options, default="draft")
+
+    class Meta:
+        ordering = ("-created_at",)  # decending order
+
+    def __str__(self):
+        return self.name
