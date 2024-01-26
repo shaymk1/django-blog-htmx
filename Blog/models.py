@@ -8,9 +8,9 @@ class Post(models.Model):
         ("draft", "Draft"),
         ("published", "Published"),
     )
-    title = models.CharField(max_lenght=250)
-    subtitle = models.CharField(max_lenght=250)
-    slug = models.SlugField(max_lenght=250, unique=True)
+    title = models.CharField(max_length=250)
+    subtitle = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="post_author"
     )
