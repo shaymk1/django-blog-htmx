@@ -11,7 +11,7 @@ def main():
     if base_settings.DEBUG:
         os.environ.setdefault(
             "DJANGO_SETTINGS_MODULE",
-            "core.settings.local_settings",
+            "core.settings.production_settings",
         )
     else:
         os.environ.setdefault(
